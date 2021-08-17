@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title> PIXEL ART MAKER </title>
+      <link rel="stylesheet" href="style3.css">
+    </head>
+    <body>
+      <h1>PIXEL ART MAKER</h1>
+      <h4> Grid Height:
+        <input type="text" id="height">
+      Grid Width:
+        <input type="text" id="width">
+      <button id="button">submit</button> </h4>
+      <h2> Pick a color <input type ="color" id="color"> </h2>
+      <h2> Design Canvas </h2>
+      <script>
+      document.getElementById('button').addEventListener("click", makeGrid);
+      function makeGrid()  {
+        let grid = document.getElementById('my_grid');
+        if (grid) {
+          grid.parentNode.removeChild(grid);
+        }
+        const tb = document.createElement('table');
+        tb.setAttribute('id', 'my_grid');
+        document.body.appendChild(tb);
+        var gridHeight = document.getElementById('height').value;
+        var gridWidth = document.getElementById('width').value;
+        for (let row = 0; row < gridHeight; row++) {
+          var newRow = document.getElementById('my_grid').insertRow(-1);
+          for (let cell = 0; cell < gridWidth; cell++) {
+            var newCell = newRow.insertCell(-1);
+            newCell.addEventListener("click", function() {
+              my_grid.rows[row].cells[cell].style.backgroundColor =
+              document.getElementById("color").value;});
+          }
+        }
+      }
+      </script>
+    </body>
+  </html>
