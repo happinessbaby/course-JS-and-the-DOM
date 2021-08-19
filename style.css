@@ -1,0 +1,9 @@
+.card {width:332px; border: 1px solid #e8b5b5; display: block;
+flex-wrap:wrap; box-shadow: 10px 5px 5px #ebcccc;}
+.name {width:300px; font-size: 30px; padding: 10px; margin: 5px; border-style:none;}
+img {width:300px; height:200px; padding: 16px}
+.info {width:300px; border: 1px solid #e8b5b5; padding: 10px; margin:5px}
+.fact {width:300px; padding:5px; }
+.list {list-style:none; width: 300px; padding: 5px; }
+.descrip {width: 300px; padding: 5px; }
+span {font-weight: bold;}
